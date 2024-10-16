@@ -1,6 +1,7 @@
 import os
 import requests
 import json
+from config import CONFIG_FILE_PATH
 from modelscope import snapshot_download
 
 
@@ -32,14 +33,11 @@ if __name__ == '__main__':
     print(f"layoutreader_model_dir is: {layoutreader_model_dir}")
 
     json_url = 'https://gitee.com/myhloli/MinerU/raw/master/magic-pdf.template.json'
-    config_file_name = "magic-pdf.json"
-    home_dir = os.path.expanduser("~")
-    config_file = os.path.join(home_dir, config_file_name)
 
     json_mods = {
         'models-dir': model_dir,
         'layoutreader-model-dir': layoutreader_model_dir,
     }
 
-    download_and_modify_json(json_url, config_file, json_mods)
-    print(f"The configuration file has been configured successfully, the path is: {config_file}")
+    download_and_modify_json(json_url, CONFIG_FILE_PATH, json_mods)
+    print(f"The configuration file has been configured successfully, the path is: {CONFIG_FILE_PATH}")
