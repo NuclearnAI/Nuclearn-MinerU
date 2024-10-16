@@ -1,7 +1,7 @@
 import os
 import requests
 import json
-from config import CONFIG_FILE_PATH
+from magic_pdf.config import CONFIG_FILE_PATH
 from modelscope import snapshot_download
 
 

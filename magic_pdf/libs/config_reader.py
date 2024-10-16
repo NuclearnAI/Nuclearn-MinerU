@@ -8,7 +8,7 @@ import os
 
 from loguru import logger
 
-from config import CONFIG_FILE_PATH
+from magic_pdf.config import CONFIG_FILE_PATH
 from magic_pdf.libs.commons import parse_bucket_key
 
 

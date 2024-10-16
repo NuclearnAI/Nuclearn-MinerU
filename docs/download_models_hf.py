@@ -1,7 +1,7 @@
 import os
 import requests
 import json
-from config import CONFIG_FILE_PATH
+from magic_pdf.config import CONFIG_FILE_PATH
 from huggingface_hub import snapshot_download
 
 
